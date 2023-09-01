@@ -1,10 +1,22 @@
+require('dotenv').config()
+
 module.exports = {
   plugins: [
     {
       resolve: '@elegantstack/gatsby-theme-flexiblog-minimal',
       options: {
-        // Add theme options here. Check documentation for available options.
-        siteUrl: process.env.URL || process.env.VERCEL_URL
+        siteUrl: process.env.URL || process.env.VERCEL_URL,
+        sources: {
+          contentful: true,
+          local: false
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     }
   ],
