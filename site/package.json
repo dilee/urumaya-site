@@ -10,9 +10,12 @@
 		"serve": "gatsby serve"
 	},
 	"dependencies": {
+		"@elegantstack/gatsby-blog-algolia": "^4.0.0",
 		"@elegantstack/gatsby-theme-flexiblog-minimal": "*",
 		"dotenv": "^16.3.1",
 		"gatsby": "5.6.0",
+		"gatsby-plugin-algolia": "^1.0.3",
+		"gatsby-plugin-manifest": "^5.12.0",
 		"gatsby-source-contentful": "^7.4.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"

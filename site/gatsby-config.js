@@ -9,7 +9,31 @@ module.exports = {
         sources: {
           contentful: true,
           local: false
+        },
+        services: {
+          algolia: false
         }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-algolia',
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        chunkSize: 10000,
+        queries: require('@elegantstack/gatsby-blog-algolia/src/queries')
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'උරුමය',
+        short_name: 'Urumaya',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#5a67d8',
+        display: 'minimal-ui',
+        icon: 'content/assets/favicon.png'
       }
     },
     {
@@ -23,25 +47,17 @@ module.exports = {
   // Customize your site metadata:
   siteMetadata: {
     //General Site Metadata
-    title: 'FlexiBlog Theme',
-    name: 'FlexiBlog',
-    description: 'My site description...',
-    address: 'New York, NY',
-    email: 'email@example.com',
-    phone: '+1 (888) 888-8888',
+    title: 'උරුමය',
+    name: 'උරුමය',
+    description: 'බලන්නන් ඇසට',
+    address: '',
+    email: '',
+    phone: '',
 
     //Site Social Media Links
     social: [
       {
         name: 'Github',
-        url: 'https://github.com/gatsbyjs'
-      },
-      {
-        name: 'Twitter',
-        url: 'https://twitter.com/gatsbyjs'
-      },
-      {
-        name: 'Instagram',
         url: 'https://github.com/gatsbyjs'
       }
     ],
@@ -51,10 +67,6 @@ module.exports = {
       {
         name: 'Home',
         slug: '/'
-      },
-      {
-        name: 'Contact',
-        slug: '/contact'
       }
     ],
 
@@ -64,33 +76,8 @@ module.exports = {
         title: 'Quick Links',
         items: [
           {
-            name: 'Advertise with us',
-            slug: '/contact'
-          },
-          {
             name: 'About Us',
             slug: '/about'
-          },
-          {
-            name: 'Contact Us',
-            slug: '/contact'
-          }
-        ]
-      },
-      {
-        title: 'Legal Stuff',
-        items: [
-          {
-            name: 'Privacy Notice',
-            slug: '/'
-          },
-          {
-            name: 'Cookie Policy',
-            slug: '/'
-          },
-          {
-            name: 'Terms Of Use',
-            slug: '/'
           }
         ]
       }
