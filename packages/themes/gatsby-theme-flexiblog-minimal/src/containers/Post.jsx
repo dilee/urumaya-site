@@ -47,7 +47,7 @@ const Post = ({
           )}
           <CardComponent variant='paper-lg'>
             <PostBody {...post} />
-            <PostTagsShare {...post} location={props.location} />
+            {/*<PostTagsShare {...post} location={props.location} />*/}
             {services.disqus && <PostComments {...post} />}
             {services.graphComment && <PostCommentsGraph {...post} />}
             {services.facebookComment && (
@@ -55,8 +55,8 @@ const Post = ({
             )}
           </CardComponent>
           <Divider />
-          <AuthorExpanded author={post.author} />
-          <Divider />
+          {/*<AuthorExpanded author={post.author} />*/}
+          {/*<Divider />*/}
           {post.category && (
             <CardList
               nodes={relatedPosts}

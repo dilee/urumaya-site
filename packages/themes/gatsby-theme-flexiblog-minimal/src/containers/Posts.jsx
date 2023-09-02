@@ -20,7 +20,7 @@ const Posts = ({
           <Divider />
           <Stack
             effectProps={{ effect: false }}
-            title='Suggested Articles'
+            title='බලන්නන් ඇසට... සිතන්නන් සිතට...'
             direction={[`column`, `column`, `column`, `row`]}
           >
             <Main mb={[3, 3, 3, 0]}>
@@ -71,16 +71,16 @@ const Posts = ({
         </>
       )}
       <Divider />
-      <Stack title='Recently Published'>
-        <Main>
-          <CardList
-            nodes={paginatedPosts.nodes}
-            variant={['horizontal', 'vertical']}
-            columns={[1, 2, 3, 3]}
-            omitMedia
-          />
-        </Main>
-      </Stack>
+      {/*<Stack title='Recently Published'>*/}
+      {/*  <Main>*/}
+      {/*    <CardList*/}
+      {/*      nodes={paginatedPosts.nodes}*/}
+      {/*      variant={['horizontal', 'vertical']}*/}
+      {/*      columns={[1, 2, 3, 3]}*/}
+      {/*      omitMedia*/}
+      {/*    />*/}
+      {/*  </Main>*/}
+      {/*</Stack>*/}
       <Divider />
       <PreFooter>
         <Pagination {...paginatedPosts.pageInfo} basePath={basePath} />

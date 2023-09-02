@@ -28,8 +28,8 @@ const PoweredByGatsby = () => (
     rel='noopener'
     sx={styles.link}
   >
-    Powered By
-    {gatsbySVG && <SVG src={gatsbySVG} />}
+    {/*Powered By*/}
+    {/*{gatsbySVG && <SVG src={gatsbySVG} />}*/}
   </Link>
 )
 

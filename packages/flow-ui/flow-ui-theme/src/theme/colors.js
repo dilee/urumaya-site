@@ -34,11 +34,11 @@ const red = {
 
 //Primary
 const alpha = {
-  alphaLighter: indigo[100],
-  alphaLight: indigo[300],
-  alpha: indigo[500],
-  alphaDark: indigo[600],
-  alphaDarker: indigo[800]
+  alphaLighter: gray[100],
+  alphaLight: gray[300],
+  alpha: gray[500],
+  alphaDark: gray[600],
+  alphaDarker: gray[800]
 }
 
 // Secondary
